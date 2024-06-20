@@ -1,0 +1,29 @@
+black
+flake8
+isort
+loguru
+mkdocs
+pip
+python-dotenv
+tqdm
+typer
+pytest
+
+# Numerical packages
+numpy
+jupyterlab
+scikit-learn
+scipy
+seaborn
+jax[cuda12]
+torch
+torchvision
+equinox
+diffrax
+matplotlib
+pandas
+optax
+
+
+# Install the current package
+-e .
