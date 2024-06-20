@@ -4,6 +4,7 @@ import unittest
 
 import jax
 import jax.numpy as jnp
+from diffrax import diffeqsolve, ODETerm, Dopri5, SaveAt
 import torch
 
 REQUIRED_PYTHON = "python3"
@@ -64,7 +65,7 @@ class TestEnvironment(unittest.TestCase):
             term = ODETerm(f)
             solver = Dopri5()
             saveat = SaveAt(ts=[1.0])
-            solution = diffeqsolve(term, solver, t0=t0, t1=1, dt0=0.1, y0=y0,
+            solution = diffeqsolve(term, solver, t0=t0, t1=t1, dt0=0.1, y0=y0,
                                    saveat=saveat)
             # Evaluate the solution at the final time
             y_final = solution.ys[0]
