@@ -3,6 +3,12 @@
 /models/*
 /reports/*
 
+
+# pycharm specific files
+*.egg-info
+*.idea
+*.xml
+
 # Mac OS-specific storage files
 .DS_Store
 
